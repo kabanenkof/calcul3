@@ -74,9 +74,13 @@ func сalculate(expression string) {
 func printResultInQuotes(text string) {
 	fmt.Println("\"" + text + "\"")
 }
-
 func checkAnswerLength(answer string) string {
 	currentLength := len(answer)
+
+	if currentLength > 10 {
+		panic("Ошибка: строка превышает 10 символов.")
+	}
+
 	correctAnswer := ""
 	if currentLength > 40 {
 		correctAnswer = answer[:40] + "..."
