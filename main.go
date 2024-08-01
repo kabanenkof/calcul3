@@ -77,7 +77,7 @@ func printResultInQuotes(text string) {
 func checkAnswerLength(answer string) string {
 	currentLength := len(answer)
 
-	if currentLength > 10 {
+	if currentLength >= 11 {
 		panic("Ошибка: строка превышает 10 символов.")
 	}
 
